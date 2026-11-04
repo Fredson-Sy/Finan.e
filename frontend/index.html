@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda conceitos de educação financeira, organize seu dinheiro e desenvolva hábitos financeiros mais conscientes.">
+    <meta name="theme-color" content="#272b6a">
+    <title>Finan.e | Educação Financeira</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos compartilhados -->
+    <link rel="stylesheet" href="src/styles/variables.css">
+    <link rel="stylesheet" href="src/styles/global.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/responsive.css">
+
+    <!-- Estilos exclusivos da página inicial -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo principal</a>
+
+    <!-- Cabeçalho e navegação -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#inicio" class="brand" data-scroll-top aria-label="Finan.e - Início da página">
+                <span class="brand-logo" aria-hidden="true">EF</span>
+                <span class="brand-name">
+                    <strong>Finan.e</strong>
+                    <span>Educação Financeira</span>
+                </span>
+            </a>
+
+            <!-- O destaque (.active) é aplicado pelo script.js conforme a rolagem -->
+            <nav class="main-navigation" aria-label="Navegação principal">
+                <a href="#inicio" class="nav-link" data-section="inicio" data-scroll-top>Início</a>
+                <a href="#sobre" class="nav-link" data-section="sobre">Sobre</a>
+                <a href="src/pages/conteudos/index.html" class="nav-link" data-section="conteudos">Conteúdos</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#acesso" class="btn btn-secondary">Entrar</a>
+                <a href="#cadastro" class="btn btn-primary">Criar conta</a>
+            </div>
+
+            <button class="mobile-menu-button" id="mobile-menu-button" type="button"
+                aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-navigation" id="mobile-navigation" aria-label="Navegação mobile">
+            <a href="#inicio" data-section="inicio" data-scroll-top>Início</a>
+            <a href="#sobre" data-section="sobre">Sobre</a>
+            <a href="src/pages/conteudos/index.html" data-section="conteudos">Conteúdos</a>
+            <a href="#acesso">Entrar</a>
+            <a href="#cadastro">Criar conta</a>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+        <!-- Apresentação principal -->
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 id="hero-title">Aprenda a cuidar melhor <span>do seu dinheiro.</span></h1>
+                    <p>Conhecimento financeiro é o primeiro passo para fazer escolhas melhores. Aprenda, descubra e desenvolva hábitos financeiros mais conscientes.</p>
+
+                    <div class="hero-actions">
+                        <a href="src/pages/conteudos/index.html" class="btn btn-primary">
+                            Explorar conteúdos
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a href="#sobre" class="btn btn-secondary">Conheça a plataforma</a>
+                    </div>
+
+                    <div class="hero-information">
+                        <span>✓ Conteúdos educativos</span>
+                        <span>✓ Aprendizado acessível</span>
+                    </div>
+                </div>
+
+                <!-- Espaço reservado para futura ilustração financeira (decorativo) -->
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="visual-decoration decoration-one"></div>
+                    <div class="visual-decoration decoration-two"></div>
+
+                    <div class="finance-card">
+                        <span class="finance-card-label">Educação financeira</span>
+                        <div class="finance-card-icon">R$</div>
+                        <h2>Conhecimento que transforma escolhas.</h2>
+                        <div class="finance-card-line"></div>
+                        <div class="finance-card-footer">
+                            <span>Aprender</span>
+                            <span>Planejar</span>
+                            <span>Conquistar</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-card">
+                        <span class="floating-icon">
+                            <i data-lucide="trending-up"></i>
+                        </span>
+                        <span class="floating-card-text">
+                            <strong>Aprenda hoje</strong>
+                            <span>Planeje seu futuro</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apresentação da plataforma -->
+        <section class="section about-section" id="sobre" aria-labelledby="about-title">
+            <div class="container about-content">
+                <div class="about-heading">
+                    <span class="section-label">NOSSA PROPOSTA</span>
+                    <h2 class="section-title" id="about-title">Conhecimento financeiro para decisões melhores.</h2>
+                </div>
+
+                <div class="about-text">
+                    <p>A educação financeira é uma ferramenta importante para desenvolver autonomia, responsabilidade e consciência na administração do dinheiro.</p>
+                    <p>Nossa plataforma reúne conteúdos educativos, materiais de apoio e atividades para ajudar estudantes a compreender conceitos financeiros presentes no cotidiano.</p>
+                    <a href="src/pages/conteudos/index.html" class="text-link">
+                        Descubra nossos conteúdos
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteúdos educativos -->
+        <section class="section topics-section" id="conteudos" aria-labelledby="topics-title">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">APRENDA NA PRÁTICA</span>
+                        <h2 class="section-title" id="topics-title">Explore nossos conteúdos</h2>
+                    </div>
+                    <p class="section-description">Conheça conceitos fundamentais para desenvolver uma relação mais consciente com o dinheiro.</p>
+                </div>
+
+                <div class="topics-grid">
+                    <article class="topic-card card card-hover">
+                        <div class="topic-icon" aria-hidden="true"><i data-lucide="piggy-bank"></i></div>
+                        <span class="topic-category">Planejamento</span>
+                        <h3>Poupança</h3>
+                        <p>Aprenda a economizar e desenvolver hábitos de organização financeira.</p>
+                        <a href="src/pages/conteudos/index.html" class="topic-link">Explorar assunto <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                    </article>
+
+                    <article class="topic-card card card-hover">
+                        <div class="topic-icon" aria-hidden="true"><i data-lucide="credit-card"></i></div>
+                        <span class="topic-category">Consumo consciente</span>
+                        <h3>Crédito</h3>
+                        <p>Entenda como funciona o crédito e como utilizá-lo com responsabilidade.</p>
+                        <a href="src/pages/conteudos/index.html" class="topic-link">Explorar assunto <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                    </article>
+
+                    <article class="topic-card card card-hover">
+                        <div class="topic-icon" aria-hidden="true"><i data-lucide="percent"></i></div>
+                        <span class="topic-category">Matemática financeira</span>
+                        <h3>Juros</h3>
+                        <p>Compreenda os juros e sua influência nas decisões financeiras.</p>
+                        <a href="src/pages/conteudos/index.html" class="topic-link">Explorar assunto <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                    </article>
+
+                    <article class="topic-card card card-hover">
+                        <div class="topic-icon" aria-hidden="true"><i data-lucide="chart-no-axes-combined"></i></div>
+                        <span class="topic-category">Economia</span>
+                        <h3>Inflação</h3>
+                        <p>Descubra como a inflação afeta os preços e o poder de compra.</p>
+                        <a href="src/pages/conteudos/index.html" class="topic-link">Explorar assunto <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                    </article>
+
+                    <article class="topic-card card card-hover">
+                        <div class="topic-icon" aria-hidden="true"><i data-lucide="shield-check"></i></div>
+                        <span class="topic-category">Segurança financeira</span>
+                        <h3>Reserva de emergência</h3>
+                        <p>Aprenda a se preparar financeiramente para situações inesperadas.</p>
+                        <a href="src/pages/conteudos/index.html" class="topic-link">Explorar assunto <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                </div>
+
+                <div class="topics-footer">
+                    <a href="src/pages/conteudos/index.html" class="btn btn-secondary">
+                        Ver todos os conteúdos
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada para ação -->
+        <section class="cta-section" id="cadastro" aria-labelledby="cta-title">
+            <div class="container cta-content">
+                <div>
+                    <span class="section-label cta-label">DÊ O PRIMEIRO PASSO</span>
+                    <h2 id="cta-title">Seu futuro financeiro começa com conhecimento.</h2>
+                    <p>Explore os materiais educativos e desenvolva novos conhecimentos.</p>
+                </div>
+                <a href="#acesso" class="btn btn-accent">
+                    Começar agora
+                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer" id="acesso">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <strong>Finan.e</strong>
+                <p>Educação financeira, conhecimento e consciência para o futuro.</p>
+            </div>
+
+            <nav class="footer-links" aria-label="Navegação do rodapé">
+                <strong>Navegação</strong>
+                <a href="#inicio" data-scroll-top>Início</a>
+                <a href="src/pages/conteudos/index.html">Conteúdos</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+            <div class="footer-links">
+                <strong>Plataforma</strong>
+                <a href="#cadastro">Criar conta</a>
+                <a href="#acesso">Entrar</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© <span id="current-year">2026</span> Finan.e. Todos os direitos reservados.</p>
+            <span>Projeto acadêmico de educação financeira.</span>
+        </div>
+    </footer>
+
+    <!-- Lucide: biblioteca de ícones -->
+    <script src="https://unpkg.com/lucide@1.66.0"></script>
+    <!-- JavaScript da página inicial -->
+    <script src="script.js"></script>
+</body>
+</html>

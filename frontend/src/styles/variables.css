@@ -1,0 +1,93 @@
+/* ==========================================================================
+   variables.css — Tokens de design da Plataforma de Educação Financeira
+   Carregar PRIMEIRO. Para trocar o visual do projeto, altere apenas este arquivo.
+   ========================================================================== */
+
+:root {
+  /* ---------- Cores (paleta do protótipo) ---------- */
+  --color-primary: #272b6a;          /* índigo principal */
+  --color-primary-hover: #1d2054;
+  --color-primary-soft: #e8e8f4;     /* fundo suave para ícones e itens ativos */
+  --color-accent: #f2a93b;           /* âmbar */
+  --color-accent-hover: #e39a2a;
+  --color-accent-soft: #fdf1da;
+
+  --color-bg: #f6f5fb;               /* fundo papel */
+  --color-surface: #ffffff;
+  --color-text: #1b1b2f;
+  --color-text-muted: #5a5878;
+  --color-border: #dcdaea;
+  --color-border-strong: #c3c0d9;
+
+  --color-success: #1f8a66;
+  --color-success-soft: #e1f3ec;
+  --color-danger: #c73e4a;
+  --color-danger-soft: #f9e4e6;
+
+  --color-on-primary: #ffffff;
+  --color-on-accent: #272b6a;        /* texto sobre âmbar (contraste AA) */
+
+  /* ---------- Tipografia ---------- */
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+
+  --text-xs: 0.8125rem;   /* 13px */
+  --text-sm: 0.9375rem;   /* 15px */
+  --text-base: 1.0625rem; /* 17px */
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.625rem, 1.2rem + 1.4vw, 2.125rem);
+  --text-3xl: clamp(2rem, 1.4rem + 2vw, 2.75rem);
+  --text-hero: clamp(2.5rem, 1.5rem + 3.4vw, 4rem);
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --weight-display: 700;
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-body: 1.6;
+
+  /* ---------- Espaçamento (base 4px) ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* ---------- Bordas e raios ---------- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --border: 1px solid var(--color-border);
+
+  /* ---------- Sombras (suaves, com tom índigo) ---------- */
+  --shadow-sm: 0 1px 2px rgba(39, 43, 106, 0.06);
+  --shadow-md: 0 4px 14px rgba(39, 43, 106, 0.08);
+  --shadow-lg: 0 12px 32px rgba(39, 43, 106, 0.12);
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;      /* conteúdo dentro da tela de 1440px */
+  --container-pad: var(--space-5);
+  --header-height: 72px;
+  --sidebar-width: 264px;
+  --focus-ring: 0 0 0 3px rgba(242, 169, 59, 0.55);
+
+  /* ---------- Movimento ---------- */
+  --transition: 160ms ease;
+
+  /* ---------- Camadas ---------- */
+  --z-header: 50;
+  --z-sidebar: 60;
+  --z-overlay: 55;
+  --z-toast: 100;
+}
+
+/* Breakpoints usados em responsive.css (variáveis CSS não funcionam em @media):
+   tablet: 1024px e 768px  |  celular: 480px */
