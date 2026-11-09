@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda como funciona o crédito, os juros e o uso consciente do dinheiro emprestado com o Finan.e.">
+
+    <title>Crédito | Finan.e</title>
+
+    <link rel="stylesheet" href="../../../styles/variables.css">
+    <link rel="stylesheet" href="../../../styles/global.css">
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/responsive.css">
+    <link rel="stylesheet" href="credito.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="../../../../../index.html" class="logo">Finan<span>.e</span></a>
+
+            <nav class="main-navigation" aria-label="Navegação principal">
+                <a href="../../../../../index.html">Página Inicial</a>
+                <a href="#conteudo">Conteúdo</a>
+                <a href="#questionario">Questionário</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Apresentação da página -->
+        <section class="page-intro">
+            <div class="container">
+                <h1>Use o crédito a seu <span>favor.</span></h1>
+                <p>Entenda como funcionam os juros, o cartão e os empréstimos para tomar decisões conscientes e evitar o endividamento.</p>
+            </div>
+        </section>
+
+        <!-- Conteúdo sobre crédito -->
+        <section class="credit-section container" id="conteudo">
+
+            <div class="section-heading">
+                <h2>O que é crédito?</h2>
+            </div>
+
+            <div class="credit-content">
+                <p>
+                    Crédito é a possibilidade de usar um dinheiro que ainda não é seu, com o compromisso de devolvê-lo no futuro. Ele aparece no cartão de crédito, no financiamento, no empréstimo e até nas compras parceladas.
+                </p>
+
+                <p>
+                    Quem concede o crédito cobra pelo risco e pelo tempo de espera, e essa cobrança são os juros. Por isso, o valor final pago costuma ser maior do que o valor que foi emprestado ou comprado.
+                </p>
+
+                <p>
+                    O crédito não é bom nem ruim por si só. Ele ajuda a realizar objetivos e a lidar com imprevistos quando é usado com planejamento, mas se torna um problema quando as parcelas ficam maiores do que a renda permite pagar.
+                </p>
+            </div>
+
+            <!-- Conceitos-chave -->
+            <div class="credit-topics">
+                <article class="topic-card">
+                    <h3>Juros</h3>
+                    <p>É o preço do dinheiro emprestado. Quanto maior a taxa e o prazo, mais caro fica o crédito.</p>
+                </article>
+
+                <article class="topic-card">
+                    <h3>Parcelamento</h3>
+                    <p>Dividir uma compra deixa a parcela menor, mas compromete a renda dos próximos meses e pode incluir juros.</p>
+                </article>
+
+                <article class="topic-card">
+                    <h3>Score de crédito</h3>
+                    <p>É uma pontuação que indica o quanto a pessoa costuma pagar suas contas em dia, e influencia a aprovação de crédito.</p>
+                </article>
+            </div>
+
+            <!-- Download do material -->
+            <div class="material-card">
+                <div class="material-icon" aria-hidden="true">PDF</div>
+
+                <div class="material-info">
+                    <h3>Material complementar</h3>
+                    <p>Baixe o material da aula para aprofundar seus conhecimentos sobre crédito.</p>
+                </div>
+
+                <a href="assets/pdf/aula-credito.pdf" class="download-button" download>
+                    <span aria-hidden="true">↓</span>
+                    Baixar PDF
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Questionário -->
+        <section class="quiz-section" id="questionario">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>Vamos praticar?</h2>
+                    <p>Responda às perguntas e descubra o quanto você aprendeu sobre crédito.</p>
+                </div>
+
+                <div class="quiz-card">
+
+                    <div class="quiz-header">
+                        <span id="question-counter">Questão 1 de 5</span>
+                        <span id="question-progress-text">20%</span>
+                    </div>
+
+                    <div class="progress-track" role="progressbar" aria-label="Progresso do questionário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" id="progress-track">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+
+                    <form id="quiz-form">
+
+                        <fieldset class="question-container">
+                            <legend id="question-title"></legend>
+                            <div class="answer-options" id="answer-options"></div>
+                        </fieldset>
+
+                        <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
+
+                        <div class="quiz-actions">
+                            <button type="button" class="next-button" id="next-button" disabled>
+                                Próxima questão
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <!-- Resultado final -->
+                    <div class="quiz-result" id="quiz-result" hidden>
+                        <span class="section-label">QUESTIONÁRIO CONCLUÍDO</span>
+                        <h3>Parabéns por chegar até aqui!</h3>
+                        <p id="result-message"></p>
+                        <div class="result-score" id="result-score"></div>
+                        <button type="button" class="restart-button" id="restart-button">
+                            Refazer questionário
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="container">
+            <a href="../../../../../index.html" class="logo">Finan<span>.e</span></a>
+            <p>Educação financeira para transformar o futuro.</p>
+            <small>&copy; 2026 Finan.e. Projeto acadêmico de educação financeira.</small>
+        </div>
+    </footer>
+
+    <script src="credito.js" defer></script>
+
+</body>
+</html>
