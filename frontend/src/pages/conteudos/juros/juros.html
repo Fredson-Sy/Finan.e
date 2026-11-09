@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entenda o que são juros e teste seus conhecimentos com o Finan.e.">
+
+    <title>Juros | Finan.e</title>
+
+    <link rel="stylesheet" href="../../../styles/variables.css">
+    <link rel="stylesheet" href="../../../styles/global.css">
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/responsive.css">
+    <link rel="stylesheet" href="juros.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="../../../../../index.html" class="logo">Finan<span>.e</span></a>
+
+            <nav class="main-navigation" aria-label="Navegação principal">
+                <a href="../../../../../index.html">Página Inicial</a>
+                <a href="#conteudo">Conteúdos</a>
+                <a href="#questionario">Questionário</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Apresentação da página -->
+        <section class="page-intro">
+            <div class="container">
+                <h1>Entenda como o tempo muda o valor do <span>dinheiro.</span></h1>
+                <p>Descubra o que são juros, como eles funcionam e por que podem trabalhar a seu favor ou contra você nas decisões financeiras do dia a dia.</p>
+            </div>
+        </section>
+
+        <!-- Conteúdo sobre juros -->
+        <section class="interest-section container" id="conteudo">
+
+            <div class="section-heading">
+                <h2>O que são juros?</h2>
+            </div>
+
+            <div class="interest-content">
+                <p>
+                    Juros são o valor cobrado ou recebido pelo uso do dinheiro ao longo do tempo. Quando você pede um empréstimo ou parcela uma compra, paga juros pela quantia que usou. Quando você investe ou guarda dinheiro em uma aplicação, recebe juros pelo dinheiro que deixou à disposição da instituição financeira.
+                </p>
+
+                <p>
+                    Existem dois tipos principais de cálculo. Nos juros simples, o percentual incide sempre sobre o valor inicial. Por exemplo: R$ 1.000 a 2% ao mês rendem R$ 20 por mês, ou seja, R$ 60 depois de três meses.
+                </p>
+
+                <p>
+                    Nos juros compostos, o percentual incide sobre o valor inicial somado aos juros já acumulados, o famoso &ldquo;juros sobre juros&rdquo;. Com os mesmos R$ 1.000 a 2% ao mês, o total após três meses seria de aproximadamente R$ 1.061,21, e a diferença cresce quanto maior for o prazo.
+                </p>
+
+                <p>
+                    Por isso, entender os juros ajuda a tomar decisões melhores: eles fazem o investimento crescer com o tempo, mas também podem fazer uma dívida aumentar rapidamente quando não é paga. Antes de contratar um crédito ou fazer uma aplicação, vale sempre comparar as taxas e o prazo.
+                </p>
+            </div>
+
+            <!-- Download do material -->
+            <div class="material-card">
+                <div class="material-icon" aria-hidden="true">PDF</div>
+
+                <div class="material-info">
+                    <h3>Material complementar</h3>
+                    <p>Baixe o material da aula para aprofundar seus conhecimentos sobre juros.</p>
+                </div>
+
+                <a href="assets/pdf/aula-juros.pdf" class="download-button" download>
+                    <span aria-hidden="true">↓</span>
+                    Baixar PDF
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Questionário -->
+        <section class="quiz-section" id="questionario">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>Vamos praticar?</h2>
+                    <p>Responda às perguntas e descubra o quanto você aprendeu sobre juros.</p>
+                </div>
+
+                <div class="quiz-card">
+
+                    <div class="quiz-header">
+                        <span id="question-counter">Questão 1 de 5</span>
+                        <span id="question-progress-text">20%</span>
+                    </div>
+
+                    <div class="progress-track" role="progressbar" aria-label="Progresso do questionário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" id="progress-track">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+
+                    <form id="quiz-form">
+
+                        <fieldset class="question-container">
+                            <legend id="question-title"></legend>
+                            <div class="answer-options" id="answer-options"></div>
+                        </fieldset>
+
+                        <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
+
+                        <div class="quiz-actions">
+                            <button type="button" class="next-button" id="next-button" disabled>
+                                Próxima questão
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <!-- Resultado final -->
+                    <div class="quiz-result" id="quiz-result" hidden>
+                        <h3>Parabéns por chegar até aqui!</h3>
+                        <p id="result-message"></p>
+                        <div class="result-score" id="result-score"></div>
+                        <button type="button" class="restart-button" id="restart-button">
+                            Refazer questionário
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="container">
+            <a href="../../../../../index.html" class="logo">Finan<span>.e</span></a>
+            <p>Educação financeira para transformar o futuro.</p>
+            <small>&copy; 2026 Finan.e. Projeto acadêmico de educação financeira.</small>
+        </div>
+    </footer>
+
+    <script src="juros.js" defer></script>
+
+</body>
+</html>
