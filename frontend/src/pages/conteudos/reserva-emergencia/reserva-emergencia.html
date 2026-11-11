@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entenda o que é a reserva de emergência, quanto guardar e onde investir, e teste seus conhecimentos com o Finan.e.">
+
+    <title>Reserva de Emergência | Finan.e</title>
+
+    <link rel="stylesheet" href="../../../styles/variables.css">
+    <link rel="stylesheet" href="../../../styles/global.css">
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/responsive.css">
+    <link rel="stylesheet" href="reserva-emergencia.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="../../../../../index.html" class="logo">Finan<span>.e</span></a>
+
+            <nav class="main-navigation" aria-label="Navegação principal">
+                <a href="../../../../../index.html">Página Inicial</a>
+                <a href="#inicio">Início</a>
+                <a href="#conteudo">Conteúdos</a>
+                <a href="#questionario">Questionário</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Apresentação da página -->
+        <section class="page-intro" id="inicio">
+            <div class="container">
+                <h1>Esteja preparado para o <span>imprevisto.</span></h1>
+                <p>Descubra o que é a reserva de emergência, quanto vale a pena guardar e onde deixar esse dinheiro para enfrentar surpresas sem entrar em dívidas.</p>
+            </div>
+        </section>
+
+        <!-- Conteúdo sobre reserva de emergência -->
+        <section class="reserve-section container" id="conteudo">
+
+            <div class="section-heading">
+                <h2>O que é reserva de emergência?</h2>
+            </div>
+
+            <div class="reserve-content">
+                <p>
+                    Reserva de emergência é um valor guardado separadamente para cobrir imprevistos e situações inesperadas, como uma despesa médica, o conserto de um equipamento essencial, a perda de uma fonte de renda ou uma emergência na família. Ela existe para que você resolva o problema sem precisar pedir dinheiro emprestado ou entrar em dívidas caras.
+                </p>
+
+                <p>
+                    Para definir o tamanho da reserva, some os seus gastos essenciais do mês, como moradia, alimentação, transporte, contas básicas e saúde. A recomendação mais comum é guardar o equivalente a 3 a 6 meses desses gastos, e quem tem renda variável ou menos estabilidade costuma buscar um valor maior. Por exemplo: com gastos essenciais de R$ 1.500 por mês, uma reserva de 6 meses seria de R$ 9.000.
+                </p>
+
+                <p>
+                    O dinheiro da reserva precisa estar seguro e disponível quando você precisar. Por isso, o ideal é escolher aplicações com liquidez diária, baixo risco e rendimento que acompanhe, ou supere, a inflação, como o Tesouro Selic ou um CDB com liquidez diária. A reserva não é para investir em busca de lucro alto: o objetivo é ter o dinheiro à mão, sem grandes oscilações.
+                </p>
+
+                <p>
+                    Por isso, a reserva de emergência é um dos primeiros passos de uma vida financeira saudável. Comece com uma meta pequena, como guardar o valor de um mês de gastos, e vá aumentando aos poucos. Use o dinheiro apenas em emergências reais e, depois de usá-lo, reponha o valor o quanto antes.
+                </p>
+            </div>
+
+            <!-- Download do material -->
+            <div class="material-card">
+                <div class="material-icon" aria-hidden="true">PDF</div>
+
+                <div class="material-info">
+                    <h3>Material complementar</h3>
+                    <p>Baixe o material da aula para aprofundar seus conhecimentos sobre reserva de emergência.</p>
+                </div>
+
+                <a href="assets/pdf/aula-reserva-emergencia.pdf" class="download-button" download>
+                    <span aria-hidden="true">↓</span>
+                    Baixar PDF
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Questionário -->
+        <section class="quiz-section" id="questionario">
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>Vamos praticar?</h2>
+                    <p>Responda às perguntas e descubra o quanto você aprendeu sobre reserva de emergência.</p>
+                </div>
+
+                <div class="quiz-card">
+
+                    <div class="quiz-header">
+                        <span id="question-counter">Questão 1 de 5</span>
+                        <span id="question-progress-text">20%</span>
+                    </div>
+
+                    <div class="progress-track" role="progressbar" aria-label="Progresso do questionário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" id="progress-track">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+
+                    <form id="quiz-form">
+
+                        <fieldset class="question-container">
+                            <legend id="question-title"></legend>
+                            <div class="answer-options" id="answer-options"></div>
+                        </fieldset>
+
+                        <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
+
+                        <div class="quiz-actions">
+                            <button type="button" class="next-button" id="next-button" disabled>
+                                Próxima questão
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <!-- Resultado final -->
+                    <div class="quiz-result" id="quiz-result" hidden>
+                        <h3>Parabéns por chegar até aqui!</h3>
+                        <p id="result-message"></p>
+                        <div class="result-score" id="result-score"></div>
+                        <button type="button" class="restart-button" id="restart-button">
+                            Refazer questionário
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="container">
+            <a href="../../../../../index.html" class="logo">Finan<span>.e</span></a>
+            <p>Educação financeira para transformar o futuro.</p>
+            <small>&copy; 2026 Finan.e. Projeto acadêmico de educação financeira.</small>
+        </div>
+    </footer>
+
+    <script src="reserva-emergencia.js" defer></script>
+
+</body>
+</html>
