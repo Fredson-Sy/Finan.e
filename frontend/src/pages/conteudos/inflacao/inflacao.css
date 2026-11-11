@@ -1,0 +1,471 @@
+/* inflacao.css — Página de conteúdo Inflação (usa os tokens de variables.css) */
+
+/* Garante que elementos com o atributo hidden sumam mesmo com display definido */
+[hidden] { display: none !important; }
+
+/* ---------- Cabeçalho e navegação ---------- */
+
+/* Logotipo à esquerda e navegação à direita */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  min-height: var(--header-height);
+}
+
+/* Sublinhado âmbar no ".e" do logotipo */
+.logo span { box-shadow: inset 0 -0.14em 0 var(--color-accent); }
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.main-navigation a {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.main-navigation a:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.main-navigation a[aria-current="page"] {
+  color: var(--color-primary);
+  font-weight: var(--weight-bold);
+}
+
+/* ---------- Elementos compartilhados da página ---------- */
+
+/* Título e texto de apoio de cada seção */
+.section-heading h2 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-2xl);
+}
+
+.section-heading p { color: var(--color-text-muted); }
+
+/* ---------- Introdução da página ---------- */
+
+/* Faixa índigo com título em branco e destaque âmbar */
+.page-intro {
+  max-height: 1000vh;
+  padding-block: var(--space-8);
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+}
+
+.page-intro h1 {
+  max-width: 22ch;
+  margin-bottom: var(--space-4);
+  font-size: var(--text-3xl);
+  color: var(--color-on-primary);
+}
+
+.page-intro h1 span { color: var(--color-accent); }
+
+.page-intro p {
+  max-width: 60ch;
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Conteúdo sobre inflação ---------- */
+
+/* Duas colunas: título à esquerda, texto à direita, material embaixo */
+.inflation-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: var(--space-6) var(--space-8);
+  align-items: start;
+  padding-block: var(--space-8);
+}
+
+.inflation-section .material-card { grid-column: 1 / -1; }
+
+/* Primeiro parágrafo em destaque, demais em tamanho de leitura */
+.inflation-content p { line-height: 1.75; }
+.inflation-content p + p { margin-top: var(--space-4); }
+.inflation-content p:first-child { font-size: var(--text-lg); }
+
+/* ---------- Material complementar (PDF) ---------- */
+
+/* Cartão com ícone, descrição e botão de download */
+.material-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.material-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-display);
+  color: var(--color-accent);
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+.material-info { flex: 1; min-width: 0; }
+.material-info h3 { margin-bottom: var(--space-1); }
+.material-info p { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+/* ---------- Botões da página ---------- */
+
+/* Estilo único para download, próxima questão e refazer */
+.download-button,
+.next-button,
+.restart-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0.6rem var(--space-5);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  line-height: 1.2;
+  color: var(--color-on-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  background: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.download-button:hover,
+.next-button:hover:not(:disabled),
+.restart-button:hover {
+  color: var(--color-on-primary);
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.download-button:active,
+.next-button:active:not(:disabled),
+.restart-button:active { transform: translateY(1px); }
+
+/* Seta do download sobe e desce ao passar o mouse */
+.download-button span { font-size: var(--text-lg); transition: transform var(--transition); }
+.download-button:hover span { transform: translateY(2px); }
+
+/* Botão desativado até o estudante responder */
+.next-button:disabled {
+  color: var(--color-text-muted);
+  background: var(--color-primary-soft);
+  border-color: var(--color-border);
+  cursor: not-allowed;
+}
+
+/* ---------- Questionário ---------- */
+
+/* Faixa branca que separa o questionário do conteúdo */
+.quiz-section {
+  padding-block: var(--space-8);
+  background: var(--color-surface);
+  border-block: var(--border);
+}
+
+/* Coluna mais estreita para facilitar a leitura das perguntas */
+.quiz-section .container { max-width: calc(820px + var(--container-pad) * 2); }
+.quiz-section .section-heading { margin-bottom: var(--space-6); }
+
+/* Cartão principal do questionário */
+.quiz-card {
+  padding: var(--space-6);
+  background: var(--color-bg);
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* Contador de questões e porcentagem */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+}
+
+#question-counter { color: var(--color-primary); }
+#question-progress-text { color: var(--color-text-muted); }
+
+/* Barra de progresso (a largura é definida pelo JavaScript) */
+.progress-track {
+  height: 10px;
+  margin-bottom: var(--space-6);
+  overflow: hidden;
+  background: var(--color-primary-soft);
+  border-radius: var(--radius-pill);
+}
+
+.progress-fill {
+  width: 20%;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-pill);
+  transition: width 400ms ease;
+}
+
+/* Enunciado da pergunta */
+.question-container {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.question-container legend {
+  width: 100%;
+  padding: 0;
+  margin-bottom: var(--space-5);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-display);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+}
+
+/* Lista de alternativas, com contador para as letras A, B, C, D */
+.answer-options {
+  display: grid;
+  gap: var(--space-3);
+  counter-reset: option;
+}
+
+/* Cada alternativa é um cartão clicável com uma letra à esquerda */
+.answer-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 56px;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.answer-option::before {
+  counter-increment: option;
+  content: counter(option, upper-alpha);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-display);
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  border-radius: 50%;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* O rádio fica invisível, mas continua acessível pelo teclado */
+.answer-option input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.answer-option span { line-height: var(--leading-snug); color: var(--color-text); }
+
+.answer-option:hover:not(:has(input:disabled)) {
+  background: var(--color-bg);
+  border-color: var(--color-primary);
+}
+
+/* Anel de foco no cartão inteiro quando navega pelo teclado */
+.answer-option:has(input:focus-visible) {
+  border-color: var(--color-primary);
+  box-shadow: var(--focus-ring);
+}
+
+/* Alternativa escolhida */
+.answer-option:has(input:checked) {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+.answer-option:has(input:checked)::before {
+  color: var(--color-on-primary);
+  background: var(--color-primary);
+}
+
+/* Depois de responder: trava o cartão e esmaece as não escolhidas */
+.answer-option:has(input:disabled) { cursor: default; }
+.answer-option:has(input:disabled:not(:checked)) { opacity: 0.6; }
+
+/* Marcação opcional de certo/errado (basta o JS adicionar .is-correct / .is-incorrect) */
+.answer-option.is-correct {
+  opacity: 1;
+  background: var(--color-success-soft);
+  border-color: var(--color-success);
+}
+
+.answer-option.is-correct::before { color: var(--color-on-primary); background: var(--color-success); }
+
+.answer-option.is-incorrect {
+  opacity: 1;
+  background: var(--color-danger-soft);
+  border-color: var(--color-danger);
+}
+
+.answer-option.is-incorrect::before { color: var(--color-on-primary); background: var(--color-danger); }
+
+/* Mensagem de acerto ou erro; some quando está vazia */
+.quiz-feedback {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: var(--border);
+  border-left-width: 4px;
+  border-radius: var(--radius-md);
+}
+
+.quiz-feedback:empty { display: none; }
+
+.quiz-feedback.correct { background: var(--color-success-soft); border-color: var(--color-success); }
+.quiz-feedback.incorrect { background: var(--color-danger-soft); border-color: var(--color-danger); }
+
+/* Botão de avançar alinhado à direita */
+.quiz-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-5);
+}
+
+/* ---------- Resultado do questionário ---------- */
+
+/* Resultado centralizado com a pontuação em destaque */
+.quiz-result {
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+}
+
+.quiz-result h3 { font-size: var(--text-2xl); }
+
+.quiz-result p {
+  margin: var(--space-3) auto 0;
+  color: var(--color-text-muted);
+}
+
+.result-score {
+  display: inline-block;
+  margin: var(--space-5) 0 var(--space-6);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-display);
+  color: var(--color-primary);
+  background: var(--color-accent-soft);
+  border: 1.5px solid var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+/* ---------- Rodapé ---------- */
+
+/* Rodapé colado ao questionário, com linha separando os direitos autorais */
+.site-footer { margin-top: 0; }
+
+.site-footer .container {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+  padding-block: var(--space-7);
+}
+
+.site-footer small {
+  width: 100%;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* ---------- Responsivo ---------- */
+
+/* Tablet: texto e título passam a uma coluna só */
+@media (max-width: 900px) {
+  .inflation-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-5);
+    }
+}
+
+/* Tablet pequeno: a navegação desce para uma segunda linha rolável */
+@media (max-width: 768px) {
+  .site-header { position: static; }
+
+  .header-content {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    padding-block: var(--space-3);
+    min-height: 0;
+  }
+
+  .main-navigation {
+    width: 100%;
+    margin-inline: calc(var(--space-2) * -1);
+    overflow-x: auto;
+  }
+
+  .page-intro,
+  .inflation-section,
+  .quiz-section { padding-block: var(--space-7); }
+}
+
+/* Celular: cartões e botões ocupam a largura toda */
+@media (max-width: 480px) {
+  .page-intro,
+  .inflation-section,
+  .quiz-section { padding-block: var(--space-6); }
+
+  .material-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-4);
+    }
+  .download-button,
+  .next-button { width: 100%; }
+
+  .quiz-card { padding: var(--space-4); }
+  .question-container legend { font-size: var(--text-lg); }
+  .answer-option { padding: var(--space-3); gap: var(--space-3); }
+  .quiz-actions { justify-content: stretch; }
+}
