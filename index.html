@@ -28,7 +28,7 @@
     <header class="header">
         <div class="container header-content">
             <a href="#inicio" class="brand" data-scroll-top aria-label="Finan.e - Início da página">
-                <span class="brand-logo" aria-hidden="true">EF</span>
+                <span class="brand-logo" aria-hidden="true">FE</span>
                 <span class="brand-name">
                     <strong>Finan.e</strong>
                     <span>Educação Financeira</span>
@@ -42,11 +42,6 @@
                 <a href="#conteudos" class="nav-link" data-section="conteudos">Conteúdos</a>
             </nav>
 
-            <div class="header-actions">
-                <a href="#acesso" class="btn btn-secondary">Entrar</a>
-                <a href="#cadastro" class="btn btn-primary">Criar conta</a>
-            </div>
-
             <button class="mobile-menu-button" id="mobile-menu-button" type="button"
                 aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-navigation">
                 <span></span>
@@ -59,8 +54,6 @@
             <a href="#inicio" data-section="inicio" data-scroll-top>Início</a>
             <a href="#sobre" data-section="sobre">Sobre</a>
             <a href="#conteudos" data-section="conteudos">Conteúdos</a>
-            <a href="#acesso">Entrar</a>
-            <a href="#cadastro">Criar conta</a>
         </nav>
     </header>
 
@@ -78,7 +71,7 @@
                             Explorar conteúdos
                             <i data-lucide="arrow-right" aria-hidden="true"></i>
                         </a>
-                        <a href="#sobre" class="btn btn-secondary">Conheça a plataforma</a>
+                        <!-- Essa parte vai ficar inativa por enquanto -> <a href="#sobre" class="btn btn-secondary">Conheça a plataforma</a> -->
                     </div>
 
                     <div class="hero-information">
@@ -128,11 +121,6 @@
                 <div class="about-text">
                     <p>A educação financeira é uma ferramenta importante para desenvolver autonomia, responsabilidade e consciência na administração do dinheiro.</p>
                     <p>Nossa plataforma reúne conteúdos educativos, materiais de apoio e atividades para ajudar estudantes a compreender conceitos financeiros presentes no cotidiano.</p>
-                    <!--olhar isso aqui-->
-                    <a href="src/pages/conteudos/index.html" class="text-link">
-                        Descubra nossos conteúdos
-                        <i data-lucide="arrow-right" aria-hidden="true"></i>
-                    </a>
                 </div>
             </div>
         </section>
@@ -189,13 +177,6 @@
                         <a href="frontend/src/pages/conteudos/reserva-emergencia/reserva-emergencia.html" class="topic-link">Explorar assunto <i data-lucide="arrow-right" aria-hidden="true"></i></a>
                     </article>
                 </div>
-
-                <div class="topics-footer">
-                    <a href="frontend/src/pages/conteudos/index.html" class="btn btn-secondary">
-                        Ver todos os conteúdos
-                        <i data-lucide="arrow-right" aria-hidden="true"></i>
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -207,7 +188,7 @@
                     <h2 id="cta-title">Seu futuro financeiro começa com conhecimento.</h2>
                     <p>Explore os materiais educativos e desenvolva novos conhecimentos.</p>
                 </div>
-                <a href="#acesso" class="btn btn-accent">
+                <a href="#conteudos" class="btn btn-accent">
                     Começar agora
                     <i data-lucide="arrow-right" aria-hidden="true"></i>
                 </a>
@@ -227,20 +208,13 @@
                 <strong>Navegação</strong>
                 <a href="#inicio" data-scroll-top>Início</a>
                 <!--Dar uma olhada aqui depois-->
-                <a href="src/pages/conteudos/index.html">Conteúdos</a>
+                <a href="#conteudos">Conteúdos</a>
                 <a href="#sobre">Sobre</a>
             </nav>
-
-            <div class="footer-links">
-                <strong>Plataforma</strong>
-                <a href="#cadastro">Criar conta</a>
-                <a href="#acesso">Entrar</a>
-            </div>
         </div>
 
         <div class="container footer-bottom">
             <p>© <span id="current-year">2026</span> Finan.e. Todos os direitos reservados.</p>
-            <span>Projeto acadêmico de educação financeira.</span>
         </div>
     </footer>
 
