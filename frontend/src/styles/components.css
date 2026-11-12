@@ -97,7 +97,7 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: 0;/*Isso remove o espaçamento n logo "Finan .e" das páginas de conteúdos*/
   font-family: var(--font-display);
   font-weight: var(--weight-display);
   font-size: var(--text-lg);

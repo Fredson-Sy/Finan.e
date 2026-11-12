@@ -202,6 +202,40 @@ function restartQuiz() {
     showQuestion();
 }
 
+// menu-mobile.js — abre/fecha o menu hambúrguer das páginas de conteúdo
+(function () {
+  "use strict";
+
+  const menuButton = document.getElementById("mobile-menu-button");
+  const mobileNav = document.getElementById("mobile-navigation");
+  if (!menuButton || !mobileNav) return;
+
+  // Atualiza o estado do botão (o CSS abre o painel por aria-expanded)
+  function setMenu(open) {
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  }
+
+  menuButton.addEventListener("click", () => {
+    setMenu(menuButton.getAttribute("aria-expanded") !== "true");
+  });
+
+  // Fecha ao clicar em qualquer link do menu
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+
+  // Fecha com Esc
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenu(false);
+  });
+
+  // Fecha ao voltar para a tela grande
+  window.matchMedia("(min-width: 901px)").addEventListener("change", (event) => {
+    if (event.matches) setMenu(false);
+  });
+})();
+
 // Eventos
 
 nextButton.addEventListener("click", nextQuestion);
